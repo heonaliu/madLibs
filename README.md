@@ -9,6 +9,11 @@
 ## Challenges I Faced
 
 - I'd have to figure out how to replace nouns/adjectives/verbs with the one the user enters. Therefore when making the template stories, I had to add placeholders (which I'd later use when prompting the user to enter words)
+- To do this, I'd use a parser. I searched up how people did this and figured that they split the text into an array and filtered it from there.
+
+## What I learned
+- that the .test() returns true/false
+
 
 ## What I'm Proud Of
 
