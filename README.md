@@ -5,6 +5,7 @@
 ## Why/Pupose
 
 - I built this because it seemed not too hard and not too simple.
+- I built a pizza application a while ago and I thought it might be fun to build something of a similar vibe that was small but fun!
 
 ## Challenges I Faced
 
@@ -13,8 +14,7 @@
 
 ## What I learned
 - that the .test() returns true/false
-
+- can use props to make use the utils function
 
 ## What I'm Proud Of
-
--
+- syntax is something I struggle with so working more in depth with what I code is beneficial to my learning of building web applications with react app. 
