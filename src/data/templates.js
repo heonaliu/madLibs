@@ -21,4 +21,5 @@ export const builtIn = [
     title: 'Part of Your World',
     text: "Look at this stuff \n Isn't it {adjective}? \n Wouldn't ya think my {noun}'s complete? \n Wouldn't ya think I'm the {noun}. The {noun} who has everything? \n Look at this {place}, treasures untold \n How many wonders can {number} {place} hold? Lookin' around here you'd think \n {something you'd think}"
 
-}
+},
+]
