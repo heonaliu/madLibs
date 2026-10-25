@@ -1,6 +1,7 @@
 ## Project Description
 
 - This is a fun website - a madlibs site. It allows you to not only play fun madlibs but also allows you to create your own and play with friends.
+- This was made with ReactJS, HTML, and CSS!
 
 ## Why/Pupose
 
