@@ -17,6 +17,7 @@
 ## What I learned
 - that the .test() returns true/false
 - can use props to make use the utils function
+- using blank label properties I can make the stuff inside the curly braces whatever I want
 
 ## What I'm Proud Of
 - syntax is something I struggle with so working more in depth with what I code is beneficial to my learning of building web applications with react app. 

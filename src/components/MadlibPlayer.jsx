@@ -48,4 +48,28 @@ export default function MadLibPlayer({ template, goBack }) {
       </div>
     );
   }
+
+  //general return if showStory not true
+  return (
+    <form className="card" onSubmit={handleSubmit}>
+        <h2>{template.title}</h2>
+        <p className= "hint">Fill in the blanks! Don't peek at the story!</p>
+        {blanks.map((blank) => (
+            <label key = {blank.index} className="field">
+                <span>{blank.index + 1}. {blank.label}</span>
+                <input 
+                    value = {answers[blank.index]}
+                    onChange={(e) => handleChange(blank.index, e.target.value)}
+                    placeholder = {`Enter a ${blank.label}`}
+                    required
+
+                />
+
+            </label>
+
+        ))}
+    </form>
+
+
+  )
 }
