@@ -11,4 +11,17 @@ export default function MadLibPlayer({template}){
     const [answers, setAnswers] = useState(() => Array(blanks.length).fill(''))
     const [showStory, setShowStory] = useState(false)
 
+    // this will be handled upon each letter change
+    // takes in the index of typed box 
+    function handleChange(index, value) {
+        // function takes the current answer and returns as the new state
+        // maps through each item and builds an array
+        setAnswers((prev) => prev.map((a, i) => (i === index ? value : a)))
+    }
+
+    //reseett!!
+    function playAgain() {
+        setAnswers(Array(blanks.length).fill(''))
+        setShowStory(false)
+    }
 }
