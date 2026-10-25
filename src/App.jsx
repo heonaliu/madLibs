@@ -6,7 +6,8 @@ function App() {
 
   return (
     <h1>
-      Hello!
+      <button>Make Your Own</button>
+      <button>Play a MadLib</button>
     </h1>
   )
 }
