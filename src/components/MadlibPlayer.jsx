@@ -67,6 +67,10 @@ export default function MadLibPlayer({ template, goBack }) {
           />
         </label>
       ))}
+      <div className="row">
+        <button type="submit">Show my story</button>
+        <button type="button" className="secondary" onClick={goBack}>Back</button>
+      </div>
     </form>
   );
 }
