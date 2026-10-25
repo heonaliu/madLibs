@@ -17,6 +17,7 @@ export function parseTemplate(text) {
             // we slice the first and last character (which are the curly braces)
             // shows up as just VERB (for e.g)
             return {
+                //adds to the the array another attribute
                 type: 'blank',
                 label: piece.slice(1, -1).replace(/_/g, ' ').trim(),
                 index: blankCount++,
