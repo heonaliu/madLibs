@@ -43,13 +43,48 @@ export default function MadlibCreator({ onSave, onCancel }) {
     // refocuses the cursor
 
     function handleSave(e) {
-        e.preventDefault()
-        if (!canSave) return
-        onSave({ id: crypto.randomUUID(), title: title.trim(), text})
-        // give it a random id, save the title, and the text
+      e.preventDefault();
+      if (!canSave) return;
+      onSave({ id: crypto.randomUUID(), title: title.trim(), text });
+      // give it a random id, save the title, and the text
     }
 
-    
+    return (
+      <form className="card" onSubmit={handleSave}>
+        <h2>Create your own MadLib!</h2>
+        <label className="field">
+          <span>Title</span>
+          <input
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder="The Oddity"
+          />
+        </label>
 
+        <div className="quick-blanks">
+          {BLANKS.map((label) => (
+            <button
+              type="button"
+              key={label}
+              className="chip"
+              onClick={() => insertBlank(label)}
+            >
+              + {label}
+            </button>
+          ))}
+        </div>
+
+        <label className="field">
+          <span>Story (put blanks in curly braces like {"{noun}"}</span>
+          <textarea
+            ref={textareaRef}
+            rows={8}
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            placeholder="Last week I ate with a {adjective} {noun}..."
+          />
+        </label>
+      </form>
+    );
   }
 }
