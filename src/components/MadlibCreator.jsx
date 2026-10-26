@@ -92,6 +92,11 @@ export default function MadlibCreator({ onSave, onCancel }) {
             ? "Add at least one blank to save"
             : `${blanks.length} blank(s): ${blanks.map((b) => b.label).join(", ")}`}
         </p>
+
+        <div className="row">
+            <button type="submit" disabled={!canSave}>Save & Play</button>
+            <button type="button" className="secondary" onClick={onCancel}>Cancel</button>
+        </div>
       </form>
     );
   }
