@@ -20,4 +20,24 @@ export default function MadlibCreator({ onSave, onCancel }) {
   const textareaRef = useRef(null);
   // checking for blanks from the text
   const blanks = parseTemplate(text).filter((p) => p.type === "blank");
+  const canSave = title.trim() !== "" && blanks.length > 0;
+
+  function insertBlank(label) {
+    //function is meant to run whenever user clicks the label
+    const el = textareaRef.current;
+    // el is the real textarea on the page
+    // tracking where the user's selection begins and ends
+    const start = el.selectionStart;
+    const end = el.selectionEnd;
+    const token = `{${label.replace(/ /g, "_")}}`;
+    // the g stands for replacing every space into an underscore
+    // so it'll come out as {plural_noun}
+    //this edits how the text is parsed
+    setText(text.slice(0, start) + token + text.slice(end));
+
+    requestAnimationFrame(() => {
+      el.focus();
+      el.selectionStart = el.selectionEnd = start + token.length;
+    });
+  }
 }
