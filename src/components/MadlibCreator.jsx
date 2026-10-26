@@ -61,6 +61,7 @@ export default function MadlibCreator({ onSave, onCancel }) {
           />
         </label>
 
+        {/* button to add more blanks */}
         <div className="quick-blanks">
           {BLANKS.map((label) => (
             <button
@@ -74,6 +75,7 @@ export default function MadlibCreator({ onSave, onCancel }) {
           ))}
         </div>
 
+        {/* typing field */}
         <label className="field">
           <span>Story (put blanks in curly braces like {"{noun}"}</span>
           <textarea
@@ -84,6 +86,12 @@ export default function MadlibCreator({ onSave, onCancel }) {
             placeholder="Last week I ate with a {adjective} {noun}..."
           />
         </label>
+
+        <p className="hint">
+          {blanks.length === 0
+            ? "Add at least one blank to save"
+            : `${blanks.length} blank(s): ${blanks.map((b) => b.label).join(", ")}`}
+        </p>
       </form>
     );
   }
