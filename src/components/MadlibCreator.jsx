@@ -34,10 +34,22 @@ export default function MadlibCreator({ onSave, onCancel }) {
     // so it'll come out as {plural_noun}
     //this edits how the text is parsed
     setText(text.slice(0, start) + token + text.slice(end));
+    // sections out and sets it to the text
 
     requestAnimationFrame(() => {
       el.focus();
       el.selectionStart = el.selectionEnd = start + token.length;
     });
+    // refocuses the cursor
+
+    function handleSave(e) {
+        e.preventDefault()
+        if (!canSave) return
+        onSave({ id: crypto.randomUUID(), title: title.trim(), text})
+        // give it a random id, save the title, and the text
+    }
+
+    
+
   }
 }
