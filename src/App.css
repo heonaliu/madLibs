@@ -41,6 +41,7 @@ h1 {
 .card {
   background: var(--card);
   border-radius: 16px;
+  position: relative;
 }
 
 .field {
@@ -126,7 +127,7 @@ button.danger {
 
 .list {
   list-style: none;
-  padding: 0;
+  padding: 50;
   margin: 0;
 }
 .list li {
