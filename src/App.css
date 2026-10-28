@@ -93,7 +93,9 @@ button.secondary {
   background: var(--accent-soft);
   color: var(--ink);
 }
-button.danger { background: #ff9da0}
+button.danger {
+  background: #ff9da0;
+}
 
 .chip {
   padding: 6px 10px;
@@ -120,4 +122,17 @@ button.danger { background: #ff9da0}
   background: var(--accent-soft);
   padding: 0 6px;
   border-radius: 6px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list li {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0e6da
 }
