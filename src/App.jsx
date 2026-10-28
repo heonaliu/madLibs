@@ -29,9 +29,6 @@ export default function App() {
       ) : (
         <div className="card">
           <h2>Pick a Story</h2>
-          <div className="row">
-            <button onClick={playRandom}>Random MadLib</button>
-          </div>
           <ul className="list">
             {builtIn.map((t) => (
               <li key={t.id}>
