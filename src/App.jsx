@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { builtIn } from "./data/templates";
 import MadLibPlayer from "./components/MadlibPlayer";
 import "./App.css";
@@ -34,13 +34,10 @@ export default function App() {
             <button onClick={playRandom}>Random MadLib</button>
           </div>
           <ul className="list">
-            {customTemplates.map((t) => (
+            {builtIn.map((t) => (
               <li key={t.id}>
                 <span>{t.title}</span>
-                <div className="row">
-                  <button>Play</button>
-                  <button className="danger">Delete</button>
-                </div>
+                <button onClick={() => setCurrentTemplate(t)}>Play</button>
               </li>
             ))}
           </ul>
