@@ -39,23 +39,22 @@ export default function App() {
   }
 
   function saveCustom(template) {
-    setCustomTemplates((prev) => [...prev, template])
-    play(template)
+    setCustomTemplates((prev) => [...prev, template]);
+    play(template);
   }
 
   function deleteCustom(id) {
-    setCurrentTemplate((prev) => prev.filter((t) => t.id !== id))
+    setCurrentTemplate((prev) => prev.filter((t) => t.id !== id));
   }
 
   function goHome() {
-    setView('home')
-    setCurrentTemplate(null)
+    setView("home");
+    setCurrentTemplate(null);
   }
 
   return (
-    <h1>
-      <button>Make Your Own</button>
-      <button>Play a MadLib</button>
-    </h1>
+    <main className="app">
+      <h1 onClick={goHome}>Mad Libs</h1>
+    </main>
   );
 }
