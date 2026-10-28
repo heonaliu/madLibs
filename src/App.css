@@ -73,3 +73,14 @@ textarea:focus {
   gap: 10px;
   flex-wrap: wrap;
 }
+
+button {
+  font:inherit;
+  font-weight: 600;
+  padding: 10px 16px;
+  border:none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
