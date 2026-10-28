@@ -3,7 +3,7 @@
 // basically this acts as a function to parse through all the text
 // and finds blank spots
 export function parseTemplate(text) {
-    let blank = 0
+    let blankCount = 0
 
     return text
     //splits the array if a pattern matches and keeps the curly brackets
