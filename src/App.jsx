@@ -86,20 +86,20 @@ export default function App() {
           <div>
             <h2>My MadLib</h2>
             {customTemplates.length === 0 ? (
-              <p>You haven't made any yet.</p>) : (
-                <ul>
-                  {customTemplates.map((t) => (
-                    <li key={t.id}>
-                      <span>{t.title}</span>
-                      <div>
-                        <button>Play</button>
-                        <button>Delete</button>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-
-              )}
+              <p>You haven't made any yet.</p>
+            ) : (
+              <ul>
+                {customTemplates.map((t) => (
+                  <li key={t.id}>
+                    <span>{t.title}</span>
+                    <div>
+                      <button>Play</button>
+                      <button>Delete</button>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </>
       )}
