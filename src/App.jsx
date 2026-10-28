@@ -68,6 +68,41 @@ export default function App() {
       {view === "create" && (
         <MadlibCreator onSave={saveCustom} onCancel={goHome} />
       )}
+      {/* home view */}
+      {view === "home" && (
+        <>
+          <div>
+            <h2>Play a Random MadLib</h2>
+            <p>Enter words first, then see the story</p>
+            <div>
+              {/* connect button to function above */}
+              <button onClick={playRandom}>Random MadLib</button>
+              <button onClick={() => setView("create")}>
+                Create your own MadLib
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <h2>My MadLib</h2>
+            {customTemplates.length === 0 ? (
+              <p>You haven't made any yet.</p>) : (
+                <ul>
+                  {customTemplates.map((t) => (
+                    <li key={t.id}>
+                      <span>{t.title}</span>
+                      <div>
+                        <button>Play</button>
+                        <button>Delete</button>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+
+              )}
+          </div>
+        </>
+      )}
     </main>
   );
 }
