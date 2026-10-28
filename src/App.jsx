@@ -55,6 +55,19 @@ export default function App() {
   return (
     <main className="app">
       <h1 onClick={goHome}>Mad Libs</h1>
+
+      {view === "play" && (
+        //playing madlibs, connect the ID of the template, pass current template as a prop, pass function as a prop
+        <MadLibPlayer
+          key={currentTemplate.id}
+          template={currentTemplate}
+          onBack={goHome}
+        />
+      )}
+
+      {view === "create" && (
+        <MadlibCreator onSave={saveCustom} onCancel={goHome} />
+      )}
     </main>
   );
 }
