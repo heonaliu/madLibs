@@ -96,3 +96,18 @@ button {
   gap: 6px;
   margin-bottom: 12px;
 }
+
+.hint {
+  color: var(--muted);
+}
+
+.story {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+.filled {
+  color:var(--accent);
+  background: var(--accent-soft);
+  padding: 0 6px;
+  border-radius: 6px;
+}
