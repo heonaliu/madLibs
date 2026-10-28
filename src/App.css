@@ -75,12 +75,24 @@ textarea:focus {
 }
 
 button {
-  font:inherit;
+  font: inherit;
   font-weight: 600;
   padding: 10px 16px;
-  border:none;
+  border: none;
   border-radius: 10px;
   background: var(--accent);
   color: white;
   cursor: pointer;
+}
+
+.chip {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  background: var(--accent-soft);
+}
+.quick-blanks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
 }
