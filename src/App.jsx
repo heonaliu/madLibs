@@ -71,30 +71,30 @@ export default function App() {
       {/* home view */}
       {view === "home" && (
         <>
-          <div>
+          <div className="card">
             <h2>Play a Random MadLib</h2>
-            <p>Enter words first, then see the story</p>
-            <div>
+            <p className="hint">Enter words first, then see the story</p>
+            <div className="row">
               {/* connect button to function above */}
               <button onClick={playRandom}>Random MadLib</button>
-              <button onClick={() => setView("create")}>
+              <button className="secondary" onClick={() => setView("create")}>
                 Create your own MadLib
               </button>
             </div>
           </div>
 
-          <div>
+          <div className="card">
             <h2>My MadLib</h2>
             {customTemplates.length === 0 ? (
-              <p>You haven't made any yet.</p>
+              <p className="hint">You haven't made any yet.</p>
             ) : (
-              <ul>
+              <ul className="list">
                 {customTemplates.map((t) => (
                   <li key={t.id}>
                     <span>{t.title}</span>
-                    <div>
+                    <div className="row">
                       <button>Play</button>
-                      <button>Delete</button>
+                      <button className="danger">Delete</button>
                     </div>
                   </li>
                 ))}
