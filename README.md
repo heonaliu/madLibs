@@ -24,3 +24,4 @@
 ## What I'm Proud Of
 - syntax is something I struggle with so working more in depth with what I code is beneficial to my learning of building web applications with react app. 
 - the react state components aren't easy to master - I'm proud of myself for taking on this challenge
+- Though I tried to attempt making the madlibs creator at first, I decided to keep the app simpler without it. I put a few there for my friends to play with and we had a great time!
