@@ -33,9 +33,23 @@ body {
 
 h1 {
   text-align: center;
+  font-size: 2.5rem;
+  color: var(--accent);
+  cursor: pointer;
 }
 
 .card {
   background: var(--card);
   border-radius: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.field span {
+  font-weight: 600;
+  text-transform: capitalize;
 }
