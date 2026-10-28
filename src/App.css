@@ -24,3 +24,18 @@ body {
     "Helvetica Neue",
     sans-serif;
 }
+
+.app {
+  max-width: 680px;
+  margin: 0;
+  padding: 24px 16px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+}
