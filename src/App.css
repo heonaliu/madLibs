@@ -85,6 +85,16 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+button.secondary {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+button.danger { background: #ff9da0}
+
 .chip {
   padding: 6px 10px;
   font-size: 0.85rem;
@@ -106,7 +116,7 @@ button {
   line-height: 1.8;
 }
 .filled {
-  color:var(--accent);
+  color: var(--accent);
   background: var(--accent-soft);
   padding: 0 6px;
   border-radius: 6px;
