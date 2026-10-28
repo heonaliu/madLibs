@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { parseTemplate } from "../utils/madlib";
 
-export default function MadLibPlayer({ template, goBack }) {
+export default function MadLibPlayer({ template, onBack }) {
   const parts = parseTemplate(template.text);
   // should produce a list with two-three attributes: type, value, and index if it's a blank
   const blanks = parts.filter((p) => p.type === "blank");
@@ -18,6 +18,11 @@ export default function MadLibPlayer({ template, goBack }) {
     setAnswers((prev) => prev.map((a, i) => (i === index ? value : a)));
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    setShowStory(true);
+  }
+
   //reseett!!
   function playAgain() {
     setAnswers(Array(blanks.length).fill(""));
@@ -28,7 +33,7 @@ export default function MadLibPlayer({ template, goBack }) {
     return (
       <div className="card">
         <h2>{template.title}</h2>
-        <p>
+        <p className="story">
           {parts.map((part, i) =>
             part.type === "text" ? (
               <span key={i}>{part.value}</span>
@@ -41,7 +46,7 @@ export default function MadLibPlayer({ template, goBack }) {
         </p>
         <div className="row">
           <button onClick={playAgain}>New Words, Same Story</button>
-          <button className="secondary" onClick={goBack}>
+          <button className="secondary" onClick={onBack}>
             Back home
           </button>
         </div>
@@ -69,7 +74,9 @@ export default function MadLibPlayer({ template, goBack }) {
       ))}
       <div className="row">
         <button type="submit">Show my story</button>
-        <button type="button" className="secondary" onClick={goBack}>Back</button>
+        <button type="button" className="secondary" onClick={onBack}>
+          Back
+        </button>
       </div>
     </form>
   );
