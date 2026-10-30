@@ -2,6 +2,7 @@
 
 - This is a fun website - a madlibs site. It allows you to not only play fun madlibs but also allows you to create your own and play with friends.
 - This was made with ReactJS, HTML, and CSS!
+- Play some of the madlibs there! 
 
 ## Why/Pupose
 
@@ -19,6 +20,7 @@
 - that the .test() returns true/false
 - can use props to make use the utils function
 - using blank label properties I can make the stuff inside the curly braces whatever I want
+- Had to remove the contents of index.css in order for the styling to not compete with app.css
 
 
 ## What I'm Proud Of
