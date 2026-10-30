@@ -7,6 +7,14 @@
   --accent: #ff6b35;
   --accent-soft: #ffe1d3;
   --muted: #7a6a5c;
+  --line: #f0e6da;
+  --accent-dark: #e2541f;
+  --accent-tint: #fff4ed;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box
 }
 
 body {
@@ -29,7 +37,7 @@ body {
 
 .app {
   max-width: 680px;
-  margin: 0;
+  margin: 0 auto;
   padding: 24px 16px;
 }
 
